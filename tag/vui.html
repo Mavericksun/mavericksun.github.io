@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Mavericksun Portfolio - vui</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Mavericksun Portfolio </a></h1>
+                <nav><ul>
+                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/nui.html">NUI</a></li>
+                    <li><a href="/category/project.html">Project</a></li>
+                    <li><a href="/category/review.html">Review</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/vui_in_elevator.html">Voice UI in elevator</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-01-25T10:32:00+08:00">
+                Published: 周四 25 一月 2018
+        </abbr>
+		<br />
+        <abbr class="modified" title="2019-04-02T10:32:00+08:00">
+                Updated: 周二 02 四月 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yuanjing-sun.html">Yuanjing Sun</a>
+        </address>
+<p>In <a href="/category/nui.html">NUI</a>.</p>
+<p>tags: <a href="/tag/nlp.html">NLP</a> <a href="/tag/speech-service.html">speech service</a> <a href="/tag/vui.html">vui</a> </p>
+</footer><!-- /.post-info --><h2>Project Goall</h2>
+<p>Define use case and demonstration to implement face recognition in seamless elevator dispatching and voice command to interact with elevator. </p>
+<h2>My Responsibility &amp; Deliverables</h2>
+<p>Storyboard of three VUI context: Floor registration/cancel floor registration；Find a specific location ( meeting room, restroom, etc.)；Find a specific person among English, Korean and Chinese staff.
+<img src="/static/vui_storyboard_visual.png"， width="50%" height="50%"></p>
+<p>Provide technical comments on existing speech service platform like iFlytek, Baidu and Microsoft.
+UI design for four displayers during the interaction: Lobby screen, three n car interactive screen.</p>
+<h3>1 Architecture of popular speech service platform and terminology in Voice UI</h3>
+<p><img src="/static/vui_architecture.png"></p>
+<h3>2 ABNF script impact on speech recognition accuracy of Dingdong smart speaker</h3>
+<p><img src="/static/vui_semantic_script_test_result.png"></p>
+<ul>
+<li>
+<p><strong>Misrecognition Source</strong>
+Similar sounding characters leads to words have different meanings.For example in the test result table, the recognizers were confused with acoustically similar or identical names such as ”6A”  with ”六安Liu4An1”.</p>
+</li>
+<li>
+<p><strong>Missing word and acoustic error</strong>
+WeChat uses a push-to-talk button to allow voice input. Sometimes, the user talks before pushing the button or release the button before finishing the voice inputs. The awake word working as push-to-talk button in VoiceUI. Jingdong’s current animation is not intuitive for 1st-time user.
+Improvements</p>
+</li>
+<li>
+<p><strong>Context-adaptive domain knowledge topology realignment</strong> 
+To improve ASR accuracy,  a context-adaptive domain knowledge topology realignment, also known as dynamic entity in Baidu Yuyin, (e.g,a conference room name list) can facilitate the recognition model. As the result  table shows, the {province} + conference room has higher accuracy than {number+ English character} conference room.</p>
+</li>
+</ul>
+<p>-<strong>Multi-language in one sentence is difficult to recognition for ASR</strong></p>
+<p>Chinese name matching may requires a Chinese PinYin Converter.
+Visual Animation to enhance VoiceUI comfort
+Baidu AI lab claims that the response time and feedback of speaker that may impact the user comfort. </p>
+<h3>3 Fishbone root cause analysis of in-car speech intelligibility test</h3>
+<p><img src="/static/vui_root_cause_analysis.png"></p>
+<h3>4 Evaluation of popular speech service platform SDK/API price and MVP solution</h3>
+<p><img src="/static/vui_speech_sdk_evaluation.png"></p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
