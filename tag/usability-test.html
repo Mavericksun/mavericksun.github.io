@@ -14,12 +14,13 @@
                     <li><a href="/category/nui.html">NUI</a></li>
                     <li><a href="/category/project.html">Project</a></li>
                     <li><a href="/category/review.html">Review</a></li>
+                    <li><a href="/category/scada-ui.html">SCADA UI</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/Pex_seamless.html">Responsive design for proximity-triggered smart hardware</a></h1>
+                    <h1 class="entry-title"><a href="/pex_seamless.html">Responsive design for proximity-triggered smart hardware</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-03-25T10:32:00+08:00">
                 Published: 周六 25 三月 2017
@@ -36,19 +37,19 @@
 <p>tags: <a href="/tag/usability-test.html">usability test</a> </p>
 </footer><!-- /.post-info --><h2>Project Goal</h2>
 <p>Distance-dependent interaction is adopted from location based services(LBS) but emphasis on interaction with smart building facilities like lock or elevator. The relative range between interface/sensor and the user is critical to distance-dependent interaction because different tasks under the different environment with different technologies (Bluetooth Low-energy, NFC, Zigbee, Wifi Direct, RFID, camera-based QR code) can create hundreds or thousands combination of interactions. How to quickly evaluate the complexity of the task and the comfort of application including Naturlistic UI solution is the key for distance-dependent interaction when lacking commercial tools like Morae.</p>
-<h3>1.Baseline acquisition from existing tool(hall call button and floor button)</h3>
+<h3>1.Passenger behavior observation provide evidence for supporting BLE chip selection</h3>
 <ul>
-<li>Motivation &amp; Problem  identification</li>
+<li>Challenge</li>
 </ul>
-<p>The BLE connection developer aimed to down-select the bluetooth chip that can satisfy residential building requirement within budget. I provided the waiting time pattern for floor setting as baseline for reference.</p>
+<p>The BLE connection developer aimed to down-select the bluetooth chip that can satisfy residential building traffic demand within budget. I provided the waiting time pattern for floor setting as baseline for reference.</p>
 <p><img src="/static/pex_tsinghua.png"></p>
 <ul>
-<li>Methodology:
+<li>Methodology: Baseline acquisition from existing tool
 The video clip took from Tsinghua project that shooted from two buildings in Tsinghua university in 2012 by surveillance camera. The shooting time of the video was from 8:30-9:00 a.m. The video is 25 fps.
 The elevator load is 1000kg for 13 persons which is same as most elevators in residential building.
 UTRC intern manually count the floor-setting time for each passenger. The start point is the door opening. And the end point is the time when the passenger get the chance to press the destination floor button.</li>
 </ul>
-<p><img src="/static/pex_baseline_floor_set_time.png"></p>
+<p><img src="/static/pex_baseline_floor_set_time.png" width="50%" height="50%"></p>
 <p>The chart came from total 159 passengers collected in Tsinghua video.
 The blue line and label is the average floor-setting time length by the passenger's sequence.
 The red line and  label was from BLE connection development experiment time which is the Average BlueTooth serving time per iPhone.
@@ -56,9 +57,9 @@ The green line and label is the maximum BT serving time per iphone.
 The table also shows the frequency (in other words, probability) of the chance that peak concurrence happens.</p>
 <h3>2</h3>
 <p>The purpose of this usability test is to verify whether the App UI can fit well with traditional elevator-taking process. Eight participants took four tasks ( regular use cases )in the 1st day and all of them together took group test (two edge cases) in the second day. The ride from building gate to elevator were captured by two preset cameras. The mobile screen were also mirrored to tester’s laptop and recorded at the same time. In this way, all interaction were captured and measured (such as complete time, accuracy rate). User’s subjective comments were collected by an 1-on-1 interview as final step. </p>
-<h3>3 Usability test plan for PeX</h3>
+<h3>3 Usability test plan outline</h3>
 <ul>
-<li>Test Plan Outline</li>
+<li>Key elements for a test plan</li>
 </ul>
 <p><img src="/static/pex_test_plan_outline.png", width="70%" height="70%"></p>
 <ul>
