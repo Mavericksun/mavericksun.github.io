@@ -40,29 +40,33 @@
         </address>
 <p>In <a href="/category/project.html">project</a>.</p>
 <p>tags: <a href="/tag/usability-test.html">usability test</a> </p>
-</footer><!-- /.post-info -->      <h2>Project Goal</h2>
-<p>Distance-dependent interaction is adopted from location based services(LBS) but emphasis on interaction with smart building facilities like lock or elevator. The relative range between interface/sensor and the user is critical to distance-dependent interaction because different tasks under the different environment with different technologies (Bluetooth Low-energy, NFC, Zigbee, Wifi Direct, RFID, camera-based QR code) can create hundreds or thousands combination of interactions. How to quickly evaluate the complexity of the task and the comfort of application including Naturlistic UI solution is the key for distance-dependent interaction when lacking commercial tools like Morae.</p>
-<h3>1.Passenger behavior observation provide evidence for supporting BLE chip selection</h3>
+</footer><!-- /.post-info -->      <h2><strong>Project Goal</strong></h2>
+<p>Distance-dependent interaction is adopted from location based services(LBS) but emphasis on interaction with smart building facilities like lock or elevator.
+The relative range between interface/sensor and the user is critical to distance-dependent interaction because different tasks under the different environment
+with different technologies (Bluetooth Low-energy, NFC, Zigbee, Wifi Direct, RFID, camera-based QR code) can create hundreds or thousands combination of 
+interactions. How to quickly evaluate the complexity of the task and the comfort of application including Naturlistic UI solution is the key for distance-
+dependent interaction when lacking commercial tools like <a href="https://www.techsmith.com/morae.html">Morae</a>.</p>
+<h2><strong>1.Actionable behavioral experiment support technology selection and design decision</strong></h2>
 <ul>
-<li>Challenge</li>
+<li><strong>Challenge: How fast should BLE connect to client-end cuncurrency runtime in residential building</strong></li>
 </ul>
 <p>The BLE connection developer aimed to down-select the bluetooth chip that can satisfy residential building traffic demand within budget. I provided the waiting time pattern for floor setting as baseline for reference.</p>
 <p><img src="/static/pex_tsinghua.png"></p>
 <ul>
-<li>Methodology: Baseline acquisition from existing tool
-The video clip took from Tsinghua project that shooted from two buildings in Tsinghua university in 2012 by surveillance camera. The shooting time of the video was from 8:30-9:00 a.m. The video is 25 fps.
-The elevator load is 1000kg for 13 persons which is same as most elevators in residential building.
-UTRC intern manually count the floor-setting time for each passenger. The start point is the door opening. And the end point is the time when the passenger get the chance to press the destination floor button.</li>
+<li><strong>My Solution: Baseline acquisition from existing hall-call fixation</strong></li>
 </ul>
+<p>The video clip took from Tsinghua project that shooted from two buildings in Tsinghua university in 2012 by surveillance camera. The shooting time of the video was from 8:30-9:00 a.m. The video is 25 fps.
+The elevator load is 1000kg for 13 persons which is same as most elevators in residential building.
+UTRC intern manually count the floor-setting time for each passenger. The start point is the door opening. And the end point is the time when the passenger get the chance to press the destination floor button.</p>
 <p><img src="/static/pex_baseline_floor_set_time.png" width="50%" height="50%"></p>
 <p>The chart came from total 159 passengers collected in Tsinghua video.
 The blue line and label is the average floor-setting time length by the passenger's sequence.
 The red line and  label was from BLE connection development experiment time which is the Average BlueTooth serving time per iPhone.
 The green line and label is the maximum BT serving time per iphone. 
 The table also shows the frequency (in other words, probability) of the chance that peak concurrence happens.</p>
-<h3>2</h3>
+<h2><strong>2 How do we know end-user can adopt to this new tool?</strong></h2>
 <p>The purpose of this usability test is to verify whether the App UI can fit well with traditional elevator-taking process. Eight participants took four tasks ( regular use cases )in the 1st day and all of them together took group test (two edge cases) in the second day. The ride from building gate to elevator were captured by two preset cameras. The mobile screen were also mirrored to tester’s laptop and recorded at the same time. In this way, all interaction were captured and measured (such as complete time, accuracy rate). User’s subjective comments were collected by an 1-on-1 interview as final step. </p>
-<h3>3 Usability test plan outline</h3>
+<h2><strong>3 Usability test plan outline</strong></h2>
 <ul>
 <li>Key elements for a test plan</li>
 </ul>
@@ -71,7 +75,7 @@ The table also shows the frequency (in other words, probability) of the chance t
 <li>Schematic drawing of test site setup and test case(edge case definition)</li>
 </ul>
 <p><img src="/static/pex_usability_test_design.png" ,width="60%" height="70%"></p>
-<h3>4 Test process &amp; data samles</h3>
+<h2><strong>4 Test process &amp; log data samples</strong></h2>
 <ul>
 <li>Field test process</li>
 </ul>
@@ -80,13 +84,13 @@ The table also shows the frequency (in other words, probability) of the chance t
 <li>Log data visualization</li>
 </ul>
 <p><img src="/static/pex_cross_platform_data_proximity_trigger.png", width="60%" height="60%"></p>
-<h3>5 Test result: Root cause analysis of interaction issue</h3>
+<h2><strong>5 Test result: Root cause analysis of interaction issue</strong></h2>
 <ul>
 <li>Questionnaire summary&amp; Key issue</li>
 </ul>
 <p><img src="/static/pex_key_issue.png", width="60%" height="60%"></p>
 <p>The Black text listed the nine most common status in interaction logic. The original article link listed in left bottom. The blue text are the usability issues found in TEDA test appeared in the nine status. Flow depicts movement: movement through water, through air, through websites, through apps, etc.</p>
-<p>-Root cause analysis of interaction issue</p>
+<p>-<strong>Root cause analysis of interaction issue</strong></p>
 <p><img src="/static/pex_rca.png", width="60%" height="60%"></p>
 <p>In science and engineering, root cause analysis (RCA) is a method of problem solving used for identifying the root causes of faults or problems.It is widely used in IT operations, telecommunications, industrial process control, accident analysis. It not only identify issues but also give recommendation and order of corrective actions based on ratings.</p>
 <ul>

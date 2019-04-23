@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>智能驾舱多模态交互设计验证驾驶模拟实验 Multimodal design validation using lane change task</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Mavericksun Portfolio </a></h1>
+                <nav><ul>
+                    <li><a href="/category/misc.html">misc</a></li>
+                    <li class="active"><a href="/category/nui.html">NUI</a></li>
+                    <li><a href="/category/project.html">Project</a></li>
+                    <li><a href="/category/review.html">Review</a></li>
+                    <li><a href="/category/scada-ui.html">SCADA UI</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/OpenDS.html" rel="bookmark"
+           title="Permalink to 智能驾舱多模态交互设计验证驾驶模拟实验 Multimodal design validation using lane change task">智能驾舱多模态交互设计验证驾驶模拟实验 Multimodal design validation using lane change task</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-03T10:20:00+08:00">
+                Published: 周五 03 四月 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/sun-yuanjing.html">Sun Yuanjing</a>
+        </address>
+<p>In <a href="/category/nui.html">NUI</a>.</p>
+<p>tags: <a href="/tag/hmi.html">HMI</a> <a href="/tag/usability.html">usability</a> </p>
+</footer><!-- /.post-info -->      <p><img src="/static/opends_topic.png", width="50%" height="50%"></p>
+<h2>Project Goal:</h2>
+<p>Well-designed multimodal interface can extend information-receiving channels beyond vision.
+Multimodal interaction design in smart coockpit should not cause information overload!
+How can we measure and compare among various graphic/voice/gesture control design prototype? </p>
+<h2>1. Benchmark usabililty test tool in industry</h2>
+<p>The Lane Change Test (ISO26022) is a simple laboratory dual task method that quantitatively measures performance impairment in a primary driving task (Mattes,2003).</p>
+<p>-<strong> Economical</strong></p>
+<p>low-fidelity driving simulator but with good validity and reliability as high-fidelity driving simulators like NADs-mini</p>
+<ul>
+<li><strong>Enable usability test in dynamic scene rather than static</strong></li>
+</ul>
+<p>Discrete event under continuous visual task </p>
+<ul>
+<li><strong>Objective behavior data </strong></li>
+</ul>
+<p>Decompose driving performance into event detection (RT) and lateral maneuver (lane deviation) that has very specific definition in ISO26022</p>
+<h2>2. Independent Variable v.s. Dependent variable</h2>
+<p>In my thesis, I investigate how/when auditory cues could improve driver responses to a visual target. 
+I manipulated three dimensions (spatial, semantic, and temporal) of verbal and nonverbal cues to interact with visual spatial instructions. </p>
+<p><strong>2 Synchrony congruency * 2 Spacial congruency * 2 Semantic Congruency </strong></p>
+<p><img src="/static/opends_experiment_design.png", width="50%" height="50%"></p>
+<p>Multimodal displays were compared with unimodal (visual-only) displays to see whether they would facilitate or degrade a vehicle control task. Twenty-six drivers participated in the <strong>Auditory-Spatial Stroop experiment</strong>(Barrow &amp; Baldwin,2009) using a lane change test (LCT). The preceding auditory cues improved response time over the visual-only condition. </p>
+<p><img src="/static/opends_experiment_order.png", width="50%" height="50%"></p>
+<p>The exposure order of 14 tracks as table 3 shows Participants will be randomly distributed into two groups for counterbalancing purpose.This different ordering considers timing and modality as much as possible. In this way, participants can hardly adapt to the visual and auditory cue patterns. </p>
+<h2>3. Driving simulator task and scene build</h2>
+<p><a href="https://github.com/breznak/openDS">OpenDS</a> is an open source driving simulator for research. The software is programmed entirely in Java and is based on the jMonkeyEngine framework, a scene graph based game engine which is mainly used for rendering and physics computation. OpenDS is distributed under the terms of GNU General Public License (GPL).</p>
+<p>Programmer in <a href="http://trim.mtu.edu/">TriM lab</a> helped me develop AudioStroop task that compensates for  synchrony issue between primary task (driving) and secondary task (interaction with HMI). But keep using metrics because  it is a standardized methodology to measure distraction. It is an easy-to-use laboratory method that can <strong>easily reset parameter according to customized requirement.</strong></p>
+<h2>4. Data</h2>
+<p><strong>The response time</strong></p>
+<p><img src="/static/opends_metrics.png", width="50%" height="50%"></p>
+<p>The reaction to the stimulus was measured as the time span between stimulus and a steering wheel angle outside of the ordinary lane keeping range. The reaction timer was activated simultaneously with the earlier cues’ appearance.</p>
+<p><strong>The accuracy of lateral control</strong></p>
+<p><img src="/static/opends_accuracy.png", width="50%" height="50%"></p>
+<p>The lateral position was measured relative to the road (and not relative to a specific lane). The accuracy of lane-change completeness is termed as the percent correct lane (PCL). PCL is defined by the driver’s position before and after its realization. </p>
+<p>-“Correct LC”: the end position of the driver is in the attended lane</p>
+<p>-“No LC”: the driver is in the same Li zone at start and end positions</p>
+<p>-“Erroneous LC”: the end position of the driver is in another lane than in the attended one</p>
+<p>-“Loss of Control LC”: the end position of the driver is in one of the Oi zone</p>
+<p><strong>The lane deviation</strong></p>
+<p><img src="/static/opends_mean_deviation.png", width="50%" height="50%"></p>
+<p>Mean deviation (Mdev) comes from the difference between the position of the condition trajectory over the baseline curve <a href="https://sites.google.com/a/mtu.edu/mapping/">Simplifed with algorithm in path mapping</a> (Mueller &amp; Perelman, 2016). 
+With the Mdev, I can calculate the lane-change behavior variance between the baseline run and the condition run. Also, I can obtain the individual differences by comparing every participant’s baseline run with the optimal curve. </p>
+<h3>5.Conclusion</h3>
+<p><img src="/static/opends_conclusion.png", width="50%" height="50%"></p>
+<p>Our results showed that adding auditory cues could help lane change test more in reaction time than accuracy. The temporal dimension seems to be the most influential in performance. That is, preceding auditory cues improved reaction time. Spatially and semantically congruent auditory cues facilitated reaction time. However, when these two dimensions conflict with each other, spatial congruency seems to have bigger impacts on performance. In other words, it is more difficult to ignore spatial location information than semantic verbal information just as in Barrow and Baldwin’s research </p>
+<h3>Reference</h3>
+<p><em>Mattes, S. (2003). The Lane Change Task as a Tool for driver Distraction Evaluation. IHRA-ITS Workshop on Driving Simulator Scenarios, October 2003-Dearborn, Michigan. wwwnrd. nhtsa. dot. gov.</em> </p>
+<p><em>Barrow, J. H., &amp; Baldwin, C. L. (2009). Verbal-spatial cue conflict: implications for the design of collision-avoidance warning systems. Paper presented at the Proceedings of the International Driving Symposium on Human Factors in Driver Assessment, Training and Vehicle Design.</em></p>
+<p><em>Mueller, S. T., Perelman, B. S., &amp; Veinott, E. S. (2016). An optimization approach for mapping and measuring the divergence and correspondence between paths. Behavior research methods, 48(1), 53-71.</em></p>
+<p>My Paper for Download
+My Slide for Defense</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
